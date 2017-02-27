@@ -7,6 +7,7 @@
 ![变态辣鸭脖](https://ww2.sinaimg.cn/large/006tNbRwgy1fd5257vgs7j30ku12ajs4.jpg)
 ###说明:
 最近有需求添加购物车中的物品,不再是一个一个的添加&起售数量也不一定就是一个,而是不确定的数量毕竟此时此刻想吃周黑鸭
+    
     - (TQAmountTextField *)amountTextField
     {
     if (_amountTextField == nil) {
@@ -19,3 +20,4 @@
     }
     return _amountTextField;
     }
+###突然间的自我,突然间才发现我要吃鸭脖 - /-
