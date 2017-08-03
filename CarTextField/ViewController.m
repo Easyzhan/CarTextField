@@ -25,7 +25,8 @@
         _amountTextField = [TQAmountTextField defaultView];
         _amountTextField.stepLength = 2;//每次加减多少
         _amountTextField.buyMinNumber = 4;//起售价格
-        _amountTextField.TQTextFiled.text =[NSString stringWithFormat:@"%d",4];
+                _amountTextField.number = 6;//已添加进购物车的个数,(就是初始中间现实的)
+        _amountTextField.TQTextFiled.text =[NSString stringWithFormat:@"%lu",(unsigned long)_amountTextField.number];
         _amountTextField.center = CGPointMake(self.view.bounds.size.width/2 - 10 - self.amountTextField.bounds.size.width / 2.0, self.view.bounds.size.height / 2.0);
         [self.view addSubview:_amountTextField];
     }
