@@ -67,6 +67,16 @@
     }
     return _subButton;
 }
+- (void)setIncreaseImageName:(NSString *)increaseImageName{
+
+    [_subButton setImage:[UIImage imageNamed:increaseImageName] forState:UIControlStateNormal];
+
+}
+- (void)setDecreaseImageName:(NSString *)decreaseImageName{
+    
+    [_subButton setImage:[UIImage imageNamed:decreaseImageName] forState:UIControlStateNormal];
+
+}
 
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
 {
