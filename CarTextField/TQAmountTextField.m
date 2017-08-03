@@ -45,7 +45,9 @@
         _subButton = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, image.size.width, image.size.height)];
         [_subButton addTarget:self action:@selector(subButtonClick:) forControlEvents:UIControlEventTouchUpInside];
         [_subButton setImage:image forState:UIControlStateDisabled];
-        [_subButton setImage:[UIImage imageNamed:@"btn_qty_minus_click"] forState:UIControlStateNormal];
+        [_subButton setImage:[UIImage imageNamed:_decreaseImageName !=nil?_decreaseImageName:@"decrease"] forState:UIControlStateNormal];
+
+//         [_subButton setImage:[UIImage imageNamed:@"btn_qty_minus_click"] forState:UIControlStateNormal];
         [self addSubview:_subButton];
         
         _TQTextFiled = [UITextField new];
@@ -56,29 +58,15 @@
         _addButton = [[UIButton alloc]initWithFrame:CGRectMake(CGRectGetMaxX(_TQTextFiled.frame), 0, image.size.width, image.size.height)];
         [_addButton setImage:imageAdd forState:UIControlStateDisabled];
         [_addButton addTarget:self action:@selector(plusButtonClick:) forControlEvents:UIControlEventTouchUpInside];
-        imageAdd = [UIImage imageNamed:@"btn_qty_plus_click"];
-        [_addButton setImage:imageAdd forState:UIControlStateNormal];
+//         imageAdd = [UIImage imageNamed:@"btn_qty_plus_click"];
+//         [_addButton setImage:imageAdd forState:UIControlStateNormal];
+                [_addButton setImage:[UIImage imageNamed:_increaseImageName !=nil?_increaseImageName:@"increase"] forState:UIControlStateNormal];
+
         [self addSubview:_addButton];
         
     }
     return _subButton;
 }
-
-//- (UIButton *)addButton
-//{
-//    if (_addButton == nil) {
-//        UIImage *image = [UIImage imageNamed:@"btn_qty_plus"];
-//        _addButton = [[UIButton alloc]initWithFrame:CGRectMake(_TQTextFiled.frame.origin.x, 0, image.size.width, image.size.height)];
-//        [_addButton setImage:image forState:UIControlStateDisabled];
-//        [_addButton addTarget:self action:@selector(plusButtonClick:) forControlEvents:UIControlEventTouchUpInside];
-//        image = [UIImage imageNamed:@"btn_qty_plus_click"];
-//        [_addButton setImage:image forState:UIControlStateNormal];
-//        [self addSubview:_addButton];
-        
-//    }
-//    return _addButton;
-//}
-
 
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
 {
