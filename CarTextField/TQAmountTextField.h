@@ -23,6 +23,11 @@
 @property (nonatomic ,weak) id<TQAmoutTextFieldDelegate> amountDelegate;
 
 + (instancetype)defaultView;
+@property (nonatomic, copy) NSString *increaseImageName;//加号按钮图片
+@property (nonatomic, copy) NSString *decreaseImageName;//减号按钮图片
 @property (nonatomic ,assign)NSInteger stepLength;//一次加减多少
 @property (nonatomic, assign) NSInteger buyMinNumber;//起售数量
+@property (nonatomic, assign) BOOL couldModifyNumber;//是否可以修改
+@property (nonatomic, assign) NSUInteger number;//添加进购物车的数量
+
 @end
