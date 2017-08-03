@@ -12,14 +12,16 @@
     {
     if (_amountTextField == nil) {
         _amountTextField = [TQAmountTextField defaultView];
-        _amountTextField.stepLength = 2;//每次加减多少
-        _amountTextField.buyMinNumber = 4;//起售价格
-        _amountTextField.TQTextFiled.text =[NSString stringWithFormat:@"%d",4];
         _amountTextField.center = CGPointMake(self.view.bounds.size.width/2 - 10 - self.amountTextField.bounds.size.width / 2.0, self.view.bounds.size.height / 2.0);
         [self.view addSubview:_amountTextField];
     }
     return _amountTextField;
     }
+    
+    在你想要的地方
+        _amountTextField.stepLength = 2;//每次加减多少
+        _amountTextField.buyMinNumber = 4;//起售价格
+        _amountTextField.TQTextFiled.text =[NSString stringWithFormat:@"%d",4];
 ### 突然间的自我,突然间才发现我要吃鸭脖 - /-行了,我回精神病院吃鸭脖了有空见
 
 #### 增加自定义图片的相关判断
